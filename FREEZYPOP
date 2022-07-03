@@ -1,6 +1,6 @@
--- [Frieza Avatar] --
+-- [Golden Frieza Avatar] --
 
--- Changes your avatar to become the Emperor of the Galaxy himself, Frieza. That's literally the script.
+-- Changes your avatar to become the Emperor of the Galaxy himself, Frieza... in his Golden form. That's literally the script.
 
 -- Everything in this script was written by Tsuagon (except for the parts that were converted by ttyyuu12345's model to script converter).
 
@@ -27,7 +27,7 @@ local mouse = player:GetMouse()
 
 -- Frieza Avatar
 
-local frieza = game:GetObjects('rbxassetid://10100551270')[1]
+local frieza = game:GetObjects('rbxassetid://10106557923')[1]
 frieza.Parent = workspace
 
 for _, v in pairs(char:GetDescendants()) do
