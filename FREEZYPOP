@@ -1,0 +1,93 @@
+-- [Frieza Avatar] --
+
+-- Changes your avatar to become the Emperor of the Galaxy himself, Frieza. That's literally the script.
+
+-- Everything in this script was written by Tsuagon (except for the parts that were converted by ttyyuu12345's model to script converter).
+
+----------------------------------------------------------------------------------------------------
+
+-- Player Stuff --
+
+local player = game:GetService("Players").LocalPlayer
+local char = player.Character
+local head = char.Head
+local rarm = char:FindFirstChild("Right Arm") or char:FindFirstChild("RightUpperArm")
+local larm = char:FindFirstChild("Left Arm") or char:FindFirstChild("LeftUpperArm")
+local rleg = char:FindFirstChild("Right Leg") or char:FindFirstChild("RightUpperLeg")
+local lleg = char:FindFirstChild("Left Leg") or char:FindFirstChild("LeftUpperLeg")
+local torso = char:FindFirstChild("Torso") or char:FindFirstChild("UpperTorso")
+local root = char.HumanoidRootPart
+local humanoid = char.Humanoid
+
+local mouse = player:GetMouse()
+
+----------------------------------------------------------------------------------------------------
+
+-- General Stuff -- 
+
+-- Frieza Avatar
+
+local frieza = game:GetObjects('rbxassetid://10100551270')[1]
+frieza.Parent = workspace
+
+for _, v in pairs(char:GetDescendants()) do
+    if v:IsA("BasePart") then
+        v.Transparency = 1
+    end
+end
+for _, v in pairs(char:GetDescendants()) do
+    if v:IsA("Decal") then
+        v.Transparency = 1
+    end
+end
+
+for _, v in pairs(frieza:GetDescendants()) do
+    if v:IsA("BasePart") then
+        v.CanCollide = false
+    end
+end
+
+local headweld = Instance.new("Weld")
+headweld.Parent = frieza.Head
+headweld.Part0 = frieza.Head
+headweld.Part1 = head
+headweld.C0 = head.CFrame
+headweld.C1 = head.CFrame
+
+local torsoweld = Instance.new("Weld")
+torsoweld.Parent = frieza.Torso
+torsoweld.Part0 = frieza.Torso
+torsoweld.Part1 = torso
+torsoweld.C0 = torso.CFrame
+torsoweld.C1 = torso.CFrame
+
+local rarmweld = Instance.new("Weld")
+rarmweld.Parent = frieza["Right Arm"]
+rarmweld.Part0 = frieza["Right Arm"]
+rarmweld.Part1 = rarm
+rarmweld.C0 = rarm.CFrame
+rarmweld.C1 = rarm.CFrame
+
+local larmweld = Instance.new("Weld")
+larmweld.Parent = frieza["Left Arm"]
+larmweld.Part0 = frieza["Left Arm"]
+larmweld.Part1 = larm
+larmweld.C0 = larm.CFrame
+larmweld.C1 = larm.CFrame
+
+local rlegweld = Instance.new("Weld")
+rlegweld.Parent = frieza["Right Leg"]
+rlegweld.Part0 = frieza["Right Leg"]
+rlegweld.Part1 = rleg
+rlegweld.C0 = rleg.CFrame
+rlegweld.C1 = rleg.CFrame
+
+local llegweld = Instance.new("Weld")
+llegweld.Parent = frieza["Left Leg"]
+llegweld.Part0 = frieza["Left Leg"]
+llegweld.Part1 = lleg
+llegweld.C0 = lleg.CFrame
+llegweld.C1 = lleg.CFrame
+
+
+--------------------------------------------------------------------------
