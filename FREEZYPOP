@@ -11,11 +11,11 @@
 local player = game:GetService("Players").LocalPlayer
 local char = player.Character
 local head = char.Head
-local rarm = char:FindFirstChild("Right Arm") or char:FindFirstChild("RightUpperArm")
-local larm = char:FindFirstChild("Left Arm") or char:FindFirstChild("LeftUpperArm")
-local rleg = char:FindFirstChild("Right Leg") or char:FindFirstChild("RightUpperLeg")
-local lleg = char:FindFirstChild("Left Leg") or char:FindFirstChild("LeftUpperLeg")
-local torso = char:FindFirstChild("Torso") or char:FindFirstChild("UpperTorso")
+local rarm = char["Right Arm"]
+local larm = char["Left Arm"]
+local rleg = char["Right Leg"]
+local lleg = char["Left Leg"]
+local torso = char.Torso
 local root = char.HumanoidRootPart
 local humanoid = char.Humanoid
 
@@ -88,6 +88,3 @@ llegweld.Part0 = frieza["Left Leg"]
 llegweld.Part1 = lleg
 llegweld.C0 = lleg.CFrame
 llegweld.C1 = lleg.CFrame
-
-
---------------------------------------------------------------------------
